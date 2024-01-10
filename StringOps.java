@@ -32,7 +32,7 @@ public class StringOps {
 
         // System.out.println(camelCase(("  hello world   hello ")));
 
-        // System.out.println(Arrays.toString(allIndexOf("MMMM",'M')));
+        System.out.println(Arrays.toString(allIndexOf("MMMM",'M')));
     }
 
      public static char toLower (char c) {
@@ -105,14 +105,12 @@ public class StringOps {
         }
 
         int[] chrIndexes = new int[chrCount];
-        
         int j = 0;
         for (int i = 0; i < string.length(); i++) {
              if (string.charAt(i) == chr) {
-                chrIndexes[j] = string.substring(i).indexOf(chr) + i;
+                chrIndexes[j] = i;
                 j++;
             }
-            
         }
 
         return chrIndexes;

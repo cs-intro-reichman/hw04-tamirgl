@@ -24,14 +24,15 @@ public class ArrayOps {
         // System.out.println(isSorted(new int[] {1, -2, 3}));
         // System.out.println(isSorted(new int[] {1, 1, 500}));
         // System.out.println(isSorted(new int[] {1, 3, 2}));
-        
     }
     
     public static int sumUpUpToNumber (int num) {
         int sum = 0;
+
         for (int i = 0; i <= num; i++) {
             sum += i;
         }
+
         return sum;
     }
 
@@ -58,32 +59,33 @@ public class ArrayOps {
                 secondMax = array[i];
             }
         }
+
         return secondMax;
     }
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
-        boolean existsInSecondArray;
+        boolean existsInOtherArray;
 
         for (int i = 0; i < array1.length; i++) {
-            existsInSecondArray = false;
+            existsInOtherArray = false;
             for (int j = 0; j < array2.length; j++) {
                 if (array1[i] == array2[j]) {
-                    existsInSecondArray = true;
+                    existsInOtherArray = true;
                 }
             }
-            if (!existsInSecondArray) {
+            if (!existsInOtherArray) {
                 return false;
             }
         }
 
         for (int i = 0; i < array2.length; i++) {
-            existsInSecondArray = false;
+            existsInOtherArray = false;
             for (int j = 0; j < array1.length; j++) {
                 if (array2[i] == array1[j]) {
-                    existsInSecondArray = true;
+                    existsInOtherArray = true;
                 }
             }
-            if (!existsInSecondArray) {
+            if (!existsInOtherArray) {
                 return false;
             }
         }
@@ -92,10 +94,8 @@ public class ArrayOps {
     }
 
     public static boolean isSorted(int [] array) {
-        // boolean isSorted = true;
         boolean didIncrease = false;
         boolean didDecrease = false;
-
 
         for (int i = 1; i < array.length; i++) {
             if (array[i] > array[i - 1]) {
