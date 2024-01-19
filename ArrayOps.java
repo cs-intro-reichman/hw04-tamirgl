@@ -88,6 +88,10 @@ public class ArrayOps {
             if (!existsInOtherArray) {
                 return false;
             }
+            /* 
+        this is an aggressive copy of code, you should have created a helper function,
+            we have functions so we do not need to copy-paste code
+            */
         }
 
         return true;
@@ -109,6 +113,7 @@ public class ArrayOps {
         if (didIncrease && didDecrease) {
             return false;
         }
+        // nice and elegant, LIKE!
         return true;
     }
 
