@@ -35,6 +35,9 @@ public class StringOps {
         System.out.println(Arrays.toString(allIndexOf("MMMM",'M')));
     }
 
+    /*
+    good creation of helper functions, usually helpers are private and not public
+    */
      public static char toLower (char c) {
         if (c >= 'A' && c <= 'Z') {
             return (char) (c + 32);
@@ -61,9 +64,17 @@ public class StringOps {
         String CONSONANTS ="bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ";
 
         for (int i = 0; i < string.length(); i++) {
+            /* 
+  		why didn't you create a helper isVowel()?
+		could be a lot cleaner
+  		*/
             if (VOWELS.indexOf(string.charAt(i)) != -1) {
                 capVowelsLowRest += toUpper(string.charAt(i));
             }
+              /* 
+	  		why didn't you create a helper isLetter()?
+			could be a lot more readable.
+	  		*/  
             else if (CONSONANTS.indexOf(string.charAt(i)) != -1) {
                 capVowelsLowRest += toLower(string.charAt(i));
             }
